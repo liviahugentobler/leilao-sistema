@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `produtos`
 --
 
-CREATE TABLE `produtos` (
+CREATE TABLE `produto` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nome` text DEFAULT NULL,
   `valor` int(11) DEFAULT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE `produtos` (
 -- Extraindo dados da tabela `produtos`
 --
 
-INSERT INTO `produtos` (`id`, `nome`, `valor`, `status`) VALUES
+INSERT INTO `produto` (`id`, `nome`, `valor`, `status`) VALUES
 (2, 'PS4', 1500, 'Vendido'),
 (3, 'Xbox 360', 800, 'Vendido'),
 (4, 'Iphone 12', 4800, 'Vendido'),
@@ -49,9 +49,9 @@ INSERT INTO `produtos` (`id`, `nome`, `valor`, `status`) VALUES
 --
 
 --
--- Índices para tabela `produtos`
+-- Índices para tabela `produto`
 --
-ALTER TABLE `produtos`
+ALTER TABLE `produto`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,9 +59,9 @@ ALTER TABLE `produtos`
 --
 
 --
--- AUTO_INCREMENT de tabela `produtos`
+-- AUTO_INCREMENT de tabela `produto`
 --
-ALTER TABLE `produtos`
+ALTER TABLE `produto`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
