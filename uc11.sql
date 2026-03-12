@@ -6,7 +6,7 @@
 -- Tempo de geração: 27-Abr-2023 às 17:58
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
-
+use uc11;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `produtos`
 --
 
-CREATE TABLE `produto` (
+CREATE TABLE `produtos` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nome` text DEFAULT NULL,
   `valor` int(11) DEFAULT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE `produto` (
 -- Extraindo dados da tabela `produtos`
 --
 
-INSERT INTO `produto` (`id`, `nome`, `valor`, `status`) VALUES
+INSERT INTO `produtos` (`id`, `nome`, `valor`, `status`) VALUES
 (2, 'PS4', 1500, 'Vendido'),
 (3, 'Xbox 360', 800, 'Vendido'),
 (4, 'Iphone 12', 4800, 'Vendido'),
@@ -51,7 +51,7 @@ INSERT INTO `produto` (`id`, `nome`, `valor`, `status`) VALUES
 --
 -- Índices para tabela `produto`
 --
-ALTER TABLE `produto`
+ALTER TABLE `produtos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -61,10 +61,12 @@ ALTER TABLE `produto`
 --
 -- AUTO_INCREMENT de tabela `produto`
 --
-ALTER TABLE `produto`
+ALTER TABLE `produtos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
